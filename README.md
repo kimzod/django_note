@@ -3,11 +3,11 @@
 
 ## 이미지 업로드 방법
 
-model
+*model.py*
 
 	image = models.ImageField(blank=True, null=True)
 
-pip install pillow
+*pip install pillow*
 
 root 위치에서 media 폴더생성
 
