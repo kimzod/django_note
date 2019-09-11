@@ -1,5 +1,3 @@
-# note
-
 
 
 ## 이미지 업로드 방법
@@ -27,6 +25,7 @@
 	from django.conf.urls.static import static
 	from django.cofng import settings
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+		
 
 
 **template** 
