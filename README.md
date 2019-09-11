@@ -23,7 +23,7 @@
 **urls.py**
 
 	from django.conf.urls.static import static
-	from django.cofng import settings
+	from django.conf import settings
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 		
 
