@@ -40,7 +40,7 @@
 <br><br>
 
 
-## ForeignKey 옵션들
+## ForeignKey(on_delete=) 옵션들
 <br><br>
 
 종류 | 동작 | 
