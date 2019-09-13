@@ -1,5 +1,6 @@
 
-
+# django 주요기능정리
+<br><br>
 ## 이미지 업로드 방법
 <br><br>
 
@@ -7,19 +8,19 @@
 
 	image = models.ImageField(blank=True, null=True)
 
-
+<br>
 **pip install pillow**
-
+<br>
 
 **root 위치에서 media 폴더생성**
-
+<br>
 
 **settings.py**
 
 	MEDIA_URL = '/media/'
 	MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+<br>
 **urls.py**
 
 	from django.conf.urls.static import static
@@ -27,7 +28,7 @@
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 		
 
-
+<br>
 **template** 
 
 	{% if project.image %}
@@ -51,6 +52,6 @@
 `SET_DEDAULT` | 연결된 객체만 삭제하고 필드 값을 설정된 기본 값으로 변경
 `SET()` | 연결된 객체만 삭제하고 지정한 값으로 변경
 `DO_NOTHING` | 아무일도 하지 않음
-<br><br>
+<br>
 
 
