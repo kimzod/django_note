@@ -8,19 +8,19 @@
 
 	image = models.ImageField(blank=True, null=True)
 
-<br>
+
 **pip install pillow**
-<br>
+
 
 **root 위치에서 media 폴더생성**
-<br>
+
 
 **settings.py**
 
 	MEDIA_URL = '/media/'
 	MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-<br>
+
 **urls.py**
 
 	from django.conf.urls.static import static
