@@ -64,9 +64,9 @@
 제네릭 뷰를 쓸 경우(paginate_by 만 넣어주면 된다)
 	
 	class PostList(generic.ListView):
-	queryset = Post.objects.filter(status=1).order_by('-created_at')
-    	template_name = 'blog/index.html'
-    	paginate_by = 4
+		queryset = Post.objects.filter(status=1).order_by('-created_at')
+		template_name = 'blog/index.html'
+		paginate_by = 4
 	
 	{% if is_paginated %}
 	 <nav aria-label="Page navigation conatiner"></nav>
@@ -88,19 +88,21 @@
 	from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 	
 	def PostList(request):
-	object_list = Post.objects.filter(status=1).order_by('-created_on')
-    	paginator = Paginator(object_list, 3)  # 3 posts in each page
-    	page = request.GET.get('page')
+		oject_list = Post.objects.filter(status=1).order_by('-created_on')
+    		paginator = Paginator(object_list, 3)  # 3 posts in each page
+    		page = request.GET.get('page')
 	
-	try:
-        post_list = paginator.page(page)
-    	except PageNotAnInteger:
-            # If page is not an integer deliver the first page
-        	post_list = paginator.page(1)
-    	except EmptyPage:
-        	# If page is out of range deliver last page of results
-        	post_list = paginator.page(paginator.num_pages)
-    	return render(request, 'index.html', {'page': page, 'post_list': post_list})
+		try:
+        		post_list = paginator.page(page)
+    		except PageNotAnInteger:
+            	# If page is not an integer deliver the first page
+        		post_list = paginator.page(1)
+    		except EmptyPage:
+			# If page is out of range deliver last page of results
+			post_list = paginator.page(paginator.num_pages)
+    		return render(request, 'index.html', {'page': page, 'post_list': post_list})
+	
+	# view
 	
 	{% if post_list.has_other_pages %}
 	  <nav aria-label="Page navigation conatiner"></nav>
