@@ -118,4 +118,52 @@
 	</div>
 	{% endif %}
 	
+
+<br><br>
+<hr/>
+<br><br>
+
+## summernote 설치
+링크 : https://github.com/summernote/django-summernote/
+<br><br>
+
+1. 설치
+
+	pip install django-summernote
+
+2. settings.py 에서 등록
+
+	INSTALLED_APPS += ('django_summernote', )
 	
+3. config urls.py 에 url 등록
+
+	path('summernote/', include('django_summernote.urls')),
+	
+4. settings.py media 파일 설정 해줘야 함
+
+	MEDIA_URL = '/media/'
+	MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+	
+	from django.conf import settings
+ 	from django.conf.urls.static import static
+
+	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+	
+5. 마이그레이트
+
+	 python manage.py migrate
+	 
+6. admin 사이트에서 사용할시
+
+	from django_summernote.admin import SummernoteModelAdmin
+	from .models import Post
+
+	class PostAdmin(SummernoteModelAdmin):
+    		summernote_fields = ('content',)
+
+	admin.site.register(Post, PostAdmin)
+	
+
+
+	
+
