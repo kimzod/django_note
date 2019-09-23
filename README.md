@@ -214,6 +214,20 @@ admin.py
 
 
 <br><br>
+<hr/>
+<br><br>
 
+## 템플릿에서 URL 추출 함수
+
+get_absolute_url() 메소드 호출하는 방법과, {% url %} 템플릿 태그를 사용 하는 방법이 있음.
+
+**get_absolute_url() 사용예시**
+
+	def get_absolute_url(self):
+        	return reverse('blog:post_detail', args=(self.slug,))
+		
+위의 메소드를 호출하면 /blog/post/slug단어  와 같은 형식이 된다. 
+
+<br>
 
 
