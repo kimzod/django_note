@@ -203,6 +203,11 @@ slug 필드에 unique 옵션을 추가해 특정 포스트를 검색시 기본 �
 allow_unicode 옵션을 추가하면 한글처리가 가능하다.
 help_text 는 해당 칼럼을 설명해주는 문구로 폼 화면에 나타남.
 
+admin.py
+	prepopulated_fields = {'slug': ('title',)}
+
+어드민 페이지 등록시 위의 옵션을 넣으면 title 필드를 이용해 값이 미리 채워지도록 한다.
+
 
 
 <br><br>
