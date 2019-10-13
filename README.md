@@ -1,6 +1,11 @@
 
 # django 주요기능정리
 <br><br>
+
+## requirement.txt 작성방법
+	pip freeze > requirements.txt
+	
+<br><br>
 ## 이미지 업로드 방법
 <br><br>
 
