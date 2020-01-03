@@ -47,10 +47,13 @@
 ## static 정적파일 이용방법
 <br><br>
 **config/setting.py**
+
 	STATIC_URL = '/static/'
 	STATICFILES_DIRS = os.path.join(BASE_DIR, 'static')
+	
 
 사용할 경우
+
 	base.html 파일에서
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'style.css' %}">
