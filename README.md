@@ -17,9 +17,6 @@
 **pip install pillow**
 
 
-**root 위치에서 media 폴더생성**
-
-
 **settings.py**
 
 	MEDIA_URL = '/media/'
