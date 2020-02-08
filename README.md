@@ -206,6 +206,22 @@
 <hr/>
 <br><br>
 
+
+## SECRET_KEY 설정
+<br><br>
+
+	KEY 값은 별도의 파일로 분리하여 import 로 가져온다.
+
+	from . import secret_key
+	
+	SECRET_KEY = secret_key.secret_config
+
+
+<br><br>
+<hr/>
+<br><br>
+
+
 ## Slug 설정
 <br>
 
