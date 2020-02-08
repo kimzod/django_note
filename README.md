@@ -266,6 +266,52 @@ get_absolute_url() 메소드 호출하는 방법과, {% url %} 템플릿 태그�
 		
 위의 메소드를 호출하면 /blog/post/slug단어  와 같은 형식이 된다. 
 
-<br>
+<br><br>
+<hr />
+<br><br>
+
+## pythonanywhere 셋팅 
+
+
+**wsgi.py**
+
+	import os
+	import sys
+	path = "/home/kimzod/zodlab"
+	if path not in sys.path:
+	    sys.path.append(path)
+
+	from django.contrib.staticfiles.handlers import StaticFilesHandler
+	from django.core.wsgi import get_wsgi_application
+
+	os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings")
+	application = StaticFilesHandler(get_wsgi_application())
+	
+
+**Static files**
+
+사용했던 js, css 등 정적파일들과 이미지 등 파일 업로드시 설정.
+앞에는 URL, 뒤에는 디렉토리이다.
+
+	/media/		/home/kimzod/zodlab/media
+	/static/	/home/kimzod/zodlab/static
+
+
+**데이터베이스**
+
+파이썬애니웨어 프리계정에서는 mysql 을 사용한다.
+
+config/settings.py
+
+	'default': {
+		'ENGINE': 'django.db.backend.mysql',
+		'NAME': 'DB이름',
+		'USER': 'DB관리자계정',
+		'PASSWORD': 'DB관리자 비밀번호',
+		"HOST': 'Database host address 이 부분을 복사해서 입력한다.
+	}
+
+
+
 
 
