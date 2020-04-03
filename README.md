@@ -201,9 +201,11 @@
 	myvenv
 	db.sqlite3
 	/static
-	.DS_Store	
-<br><br>
-<hr/>
+	.DS_Store
+	/venv
+	.idea	
+	<br><br>
+	<hr/>
 <br><br>
 
 
