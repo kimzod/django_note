@@ -204,8 +204,8 @@
 	.DS_Store
 	/venv
 	.idea	
-	<br><br>
-	<hr/>
+
+<hr/>
 <br><br>
 
 
